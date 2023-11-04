@@ -181,3 +181,10 @@ SELECT hero.hero_name, class.class_name
 FROM hero
 JOIN class ON hero.class_id = class.class_id
 WHERE class_name LIKE '%archer%';
+
+--7. 	Create new branch named "feat/select-avg-playerlevel-per-class"
+
+SELECT player.player_level,class.class_name
+FROM player
+JOIN hero ON player.hero_id = hero.hero_id
+JOIN class ON hero.class_id = class.class_id;
